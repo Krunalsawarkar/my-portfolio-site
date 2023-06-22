@@ -3,10 +3,11 @@ import './about.css'
 import AboutImg from "../../assets/about.jpg"
 import CV from "../../assets/resume.pdf"
 import Info from './Info'
+import { Element } from 'react-scroll'
 
 const About = () => {
   return (
-    <section className="about secton" id="about">
+    <Element name='about' className="about secton" id="about">
         <h2 className="section__title">About Me</h2>
         <span className="section__subtitle">My Introduction</span>
 
@@ -44,7 +45,7 @@ const About = () => {
                 </a>
             </div>
         </div>
-    </section>
+    </Element>
   )
 }
 
