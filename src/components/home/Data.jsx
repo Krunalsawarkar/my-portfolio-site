@@ -8,7 +8,7 @@ const Data = () => {
         </h1>
         <h3 className='home__subtitle'>Web Developer</h3>
         <p className="home__description">
-            Welcome to my portfolio website showcasing my creative work in ReactJs and NextJs also backend.
+            Welcome to my portfolio website showcasing my creative work in ReactJs and NextJs, also implementing backend.
         </p>
 
         <a href="#contact" className="button button--flex">
