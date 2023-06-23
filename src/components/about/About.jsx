@@ -15,7 +15,7 @@ const About = () => {
             <img src={AboutImg} alt="" className="about__img" />
             <div className="about__data">
                 <Info/>
-                <p className="about__description">Hello, my name is Krunal Sawarkar. I am passionate frontend developer specializing in ReactJs and NextJs. With a strong foundation in these cutting-edge technologies, I have honed my skills to create dynamic and immersive web experiences. </p>
+                <p className="about__description">Hello, my name is Krunal Sawarkar. I am passionate frontend developer specializing in ReactJs, React Native and NextJs. With a strong foundation in these cutting-edge technologies, I have honed my skills to create dynamic and immersive web experiences. </p>
                 <a download="" href={CV} className="button button--flex">Download CV
                 <svg
                 class="button__icon"
