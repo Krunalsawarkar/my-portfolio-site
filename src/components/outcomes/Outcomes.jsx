@@ -14,6 +14,7 @@ const Outcomes = () => {
       <h2 className="section__title">Outcomes</h2>
       <span className="section__subtitle">What i offer</span>
       <div className="outcomes__container container grid">
+        
         <div className="outcomes__content">
           <div>
             <i className="uil uil-web-grid outcomes__icon"></i>
