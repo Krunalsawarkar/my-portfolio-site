@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./outcomes.css";
 import { Element } from "react-scroll";
 
 const Outcomes = () => {
+  const [toggleState, setToggleState] = useState(0);
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
+
   return (
     <Element className="outcomes section" id="outcomes">
       <h2 className="section__title">Outcomes</h2>
@@ -11,16 +17,16 @@ const Outcomes = () => {
         <div className="outcomes__content">
           <div>
             <i className="uil uil-web-grid outcomes__icon"></i>
-            <h3 className="outcomes__title">React.js/ React Native</h3>
+            <h3 className="outcomes__title">React.js/ <br /> React Native</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button" onClick={() => toggleTab(1)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 1 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">React.js/ React Native</h3>
               <p className="outcomes__modal-description">
                 I am skilled in frontend development with expertise in React.js,
@@ -70,14 +76,14 @@ const Outcomes = () => {
             <i className="uil uil-arrow outcomes__icon"></i>
             <h3 className="outcomes__title">App Development</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button" onClick={() => toggleTab(2)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 2 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">App Development</h3>
               <p className="outcomes__modal-description">
                 I am skilled in web and app development, with expertise in
@@ -127,14 +133,14 @@ const Outcomes = () => {
             <i className="uil uil-palette outcomes__icon"></i>
             <h3 className="outcomes__title">UI Designs</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button"  onClick={() => toggleTab(3)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 3 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">UI Designs</h3>
               <p className="outcomes__modal-description">
                 I have a strong passion for UI design, which complements my
@@ -187,14 +193,14 @@ const Outcomes = () => {
             <i className="uil uil-github-alt outcomes__icon"></i>
             <h3 className="outcomes__title">Version Control</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button" onClick={() => toggleTab(4)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 4 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">Version Control</h3>
               <p className="outcomes__modal-description">
                 I possess strong skills in Git and GitHub, essential tools for
@@ -247,14 +253,14 @@ const Outcomes = () => {
             <i className="uil uil-box outcomes__icon"></i>
             <h3 className="outcomes__title">Node.js/ Express.js</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button" onClick={() => toggleTab(5)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 5 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">Node.js/ Express.js</h3>
               <p className="outcomes__modal-description">
                 With my expertise in Node.js and Express.js, I can develop
@@ -303,14 +309,14 @@ const Outcomes = () => {
             <i className="uil uil-database outcomes__icon"></i>
             <h3 className="outcomes__title">Database Managment</h3>
           </div>
-          <span className="outcomes__button">
+          <span className="outcomes__button" onClick={() => toggleTab(6)}>
             View More
             <i className="uil uil-arrow-right outcomes__button-icon"></i>
           </span>
 
-          <div className="outcomes__modal">
+          <div className={toggleState === 6 ? "outcomes__modal active-modal" : "outcomes__modal"}>
             <div className="outcomes__modal-content">
-              <i className="uil uil-times outcomes__modal-close"></i>
+              <i className="uil uil-times outcomes__modal-close" onClick={() => toggleTab(0)}></i>
               <h3 className="outcomes__modal-title">Database Managment</h3>
               <p className="outcomes__modal-description">
                 I have a strong proficiency in managing databases using MySQL
